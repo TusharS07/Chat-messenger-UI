@@ -9,41 +9,41 @@ function sendMsg() {
 
 
     const date = new Date();
-let hours = date.getHours();
-let minutes = date.getMinutes();
-const ampm = hours >= 12 ? 'PM' : 'AM';
+    let hours = date.getHours();
+    let minutes = date.getMinutes();
+    const ampm = hours >= 12 ? 'PM' : 'AM';
 
-hours = hours % 12;
-hours = hours ? hours : 12; // handle midnight (0 hours)
+    hours = hours % 12;
+    hours = hours ? hours : 12; // handle midnight (0 hours)
 
-minutes = minutes < 10 ? '0' + minutes : minutes;
+    minutes = minutes < 10 ? '0' + minutes : minutes;
 
-const formattedTime = hours + ':' + minutes + ' ' + ampm;
-console.log(formattedTime); // Example output: "10:05 AM"
+    const formattedTime = hours + ':' + minutes + ' ' + ampm;
+    console.log(formattedTime); // Example output: "10:05 AM"
 
-//store in object
+    //store in object
 
-let msgData = {
-    "msg": msg,
-    "time": formattedTime
-}
+    let msgData = {
+        "msg": msg,
+        "time": formattedTime
+    }
 
-allChats.push(msgData);
+    allChats.push(msgData);
 
-console.log(allChats);
+    console.log(allChats);
 
-var allmsg = [];
-$.each(allChats, function(i, value) {
-    const cssClassIndex = i % cssClass.length;
+    var allmsg = [];
+    $.each(allChats, function (i, value) {
+        const cssClassIndex = i % cssClass.length;
 
-    
-    allmsg = `<div class="message ${cssClass[cssClassIndex]}">
+
+        allmsg = `<div class="message ${cssClass[cssClassIndex]}">
     <p>${value.msg}</p>
     <span class="time">${value.time}</span>
   </div>`
 
-});
-$('#chats').append(allmsg);
+    });
+    $('#chats').append(allmsg);
 
 
 }

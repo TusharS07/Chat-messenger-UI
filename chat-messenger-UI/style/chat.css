@@ -91,13 +91,14 @@ header {
     object-fit: cover;
     border-radius: 50%;
 }
+
 /******************************************/
 .all-chats {
     width: 100%;
     height: 630px;
     display: flex;
-  flex-direction: column;
-  background-color: azure;
+    flex-direction: column;
+    background-color: azure;
 }
 
 .message {
@@ -108,26 +109,26 @@ header {
     border-radius: 15px;
     font-size: 16px;
     max-width: 200px;
-  }
-  
-  .received {
+}
+
+.received {
     align-self: flex-start;
     background-color: #f1f0f0;
-  }
-  
-  .sent {
+}
+
+.sent {
     align-self: flex-end;
     background-color: #0084ff;
     color: #fff;
-  }
-  
-  .time {
+}
+
+.time {
     font-size: 12px;
     margin-top: 5px;
     text-align: right;
-  }
+}
 
-  /******************************************/
+/******************************************/
 
 .chat-input {
     box-sizing: border-box;
@@ -211,7 +212,3 @@ header {
     width: 80%;
     height: 80%;
 }
-
-
-
-
